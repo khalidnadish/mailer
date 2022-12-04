@@ -1,0 +1,28 @@
+{
+  "name": "mailer",
+  "version": "1.0.0",
+  "description": "backend for mailing",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start":"nodemon app.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/khalidnadish/mailer.git"
+  },
+  "author": "khalid nadish",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/khalidnadish/mailer/issues"
+  },
+  "homepage": "https://github.com/khalidnadish/mailer#readme",
+  "dependencies": {
+    "body-parser": "^1.17.2",
+    "cors": "^2.8.5",
+    "express": "^4.18.2",
+    "express-handlebars": "^3.0.0",
+    "nodemailer": "^6.8.0",
+    "nodemon": "^2.0.20"
+  }
+}
