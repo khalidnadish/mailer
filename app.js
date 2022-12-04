@@ -56,4 +56,4 @@ app.post("/sendMail", (req, res) => {
   });
 });
 
-app.listen(process.env.PORT || 3000, '127.0.0.1',() => console.log("Server working Now..."));
+app.listen(process.env.PORT || 3000, '0.0.0.0',() => console.log("Server working Now..."));
