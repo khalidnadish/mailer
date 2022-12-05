@@ -22,7 +22,7 @@ app.get("/", (req, res) => {
 const hostData="smtp.hostinger.com"
 const portData=465
 const authUser= "nadish@nadish.online"
-const authPass= "Leno_1972"
+const authPass= "Leno_1972123"
 const fromMail= "<nadish@nadish.online>"
 const toMail ="nadish@nadish.online"
 const mailSubject= "Mail From Website"
@@ -32,17 +32,18 @@ const mailBody= "mail Body khalid from mailer"
 /* ---------------------------------------------------------- */
 app.post("/sendMail", (req, res) => {
   let transporter = nodemailer.createTransport({
-    host: hostData,
-    port: portData,
+    host: "smtp.hostinger.com",
+    port: 465,
+    secure: true,
     auth: {
-      user: authUser, // generated ethereal user
-      pass: authPass, // generated ethereal password
+      user: "website@nadish.online", // generated ethereal user
+      pass: "Leno_1972", // generated ethereal password
     },
   });
 
   let mailOptions = {
-    from: `Mail From Website ${fromMail}`, // sender address
-    to: toMail, // list of receivers
+    from: '"Mail From Ur Website" <website@nadish.online>',
+    to: "nadish@nadish.online", // list of receivers
     subject: mailSubject, // Subject line
     text: mailBody, // plain text body
   };
@@ -56,4 +57,4 @@ app.post("/sendMail", (req, res) => {
   });
 });
 
-app.listen(process.env.PORT || 3000, '0.0.0.0',() => console.log("Server working Now..."));
+app.listen(process.env.PORT || 3000, () => console.log("Server working Now..."));
